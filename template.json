@@ -2,6 +2,42 @@
     "version": "2",
     "templates": [
         {
+			"categories": [
+				"Other",
+				"Tools"
+			],
+			"description": "Open-Source Privacy-respecting metasearch engine",
+			"env": [
+				{
+					"default": "http://localhost:9017",
+					"label": "BASE_URL",
+					"name": "BASE_URL"
+				},
+				{
+					"default": "my-instance",
+					"label": "INSTANCE_NAME",
+					"name": "INSTANCE_NAME"
+				}
+			],
+			"image": "searxng/searxng:latest",
+			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/searx.png",
+			"name": "SearXNG",
+			"platform": "linux",
+			"ports": [
+				"9017:8080/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "SearXNG",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/portainer/Files/AppData/Config/searxng",
+					"container": "/etc/searxng"
+				}
+			],
+			"note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://docs.searxng.org/\" target=\"_blank\">https://docs.searxng.org/</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.searxng.org/admin/installation-docker.html\" target=\"_blank\">https://docs.searxng.org/admin/installation-docker.html</a><br><h3><b>Pi-Hosted dedicated documentation: </b><a href=\"https://github.com/pi-hosted/pi-hosted/blob/master/docs/searxng.md\" target=\"_blank\">searxng.md</a></h3><br><br><br>"
+		},
+        {
             "categories": [
                 "Other"
             ],
